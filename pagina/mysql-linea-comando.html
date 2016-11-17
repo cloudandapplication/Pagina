@@ -38,22 +38,13 @@
         <ul class="sidebar-nav">
             <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
             <li class="sidebar-brand">
-                <a href="#top" onclick=$("#menu-close").click();>Cloud&amp;Application</a>
+                <a href="http://159.203.170.17/" onclick=$("#menu-close").click();>Cloud&amp;Application</a>
             </li>
             <li>
                 <a href="#top" onclick=$("#menu-close").click();>Home</a>
             </li>
             <li>
-                <a href="#about" onclick=$("#menu-close").click();>Lema</a>
-            </li>
-            <li>
-                <a href="#services" onclick=$("#menu-close").click();>Repositorios</a>
-            </li>
-            <li>
-                <a href="#portfolio" onclick=$("#menu-close").click();>Nuestro Trabajo</a>
-            </li>
-            <li>
-                <a href="#contact" onclick=$("#menu-close").click();>Contactos</a>
+                <a href="#about" onclick=$("#menu-close").click();>Tarea 1</a>
             </li>
         </ul>
     </nav>
@@ -61,8 +52,7 @@
     <!-- Header -->
     <header id="top" class="header">
         <div class="text-vertical-center">
-            <h1>Bienvenido a Cloud&amp;Application</h1>
-            <h3>Tareas y repositorios</h3>
+            <h1>Tarea 1</h1>
             <br>
             <a href="#about" class="btn btn-dark btn-lg">Mire Más</a>
         </div>
@@ -73,57 +63,136 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Todos nuestros trabajos en 2 repositorios!</h2>
-                    <p class="lead">Para su comodidad</p>
-                </div>
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container -->
-    </section>
-
-    <!-- Services -->
-    <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
-    <section id="services" class="services bg-primary">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-lg-10 col-lg-offset-1">
-                    <h2>Repositorios</h2>
+                    <h2>Crear base de datos con llaves foraneas en Mysql <br/>linea de comandos.</h2>
+                    <div class="col-lg-10 col-lg-offset-1 text-center">
                     <hr class="small">
-                    <div class="row">
-                    	<div class="col-md-3 col-sm-6">
-                            <div class="service-item">
-                            </span>
+                        <p>Para esto se utilizaran las herramientas:</p>
+                        <p>PuTTy en su ver. 0.67. <a href="http://www.putty.org/" target="blank">-Descárgalo-</a></p>
+                        <p>Servidor Ubuntu LAMP 16.04</p>
+                        <hr class="small">
+                        <p>La base de datos que se construirá será la siguiente:</p>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="portfolio-item">
+                                    <img class="img-portfolio img-responsive" src="img/mysql1.png">
+                                </div>
                             </div>
+                            <p>Abrir PuTTy y loguearse con <strong>root</strong> como usuario y su contraseña.</p>
+                            <div class="col-md-12">
+                                <div class="portfolio-item">
+                                    <img class="img-portfolio img-responsive" src="img/mysql2.png">
+                                </div>
+                            </div>
+                            <p>Se mostrara esta ventana si todo anda bien.</p>
+                            <div class="col-md-12">
+                                <div class="portfolio-item">
+                                    <img class="img-portfolio img-responsive" src="img/mysql3.png">
+                                </div>
+                            </div>
+                            <p>Para poder entrar a mysql en su servidor escriba:<br/>
+                            <strong>mysql –u root –p</strong><br/> en la línea de comando como se muestra, <br/>al presionar enter esta pedirá la contraseña de mysql.
+                            </p>
+                            <div class="col-md-12">
+                                <div class="portfolio-item">
+                                    <img class="img-portfolio img-responsive" src="img/mysql4.png">
+                                </div>
+                            </div>
+                            <p>Se mostrara esta ventana si todo anda bien.<br/> Ahora estamos en mysql.</p>
+                            <div class="col-md-12">
+                                <div class="portfolio-item">
+                                    <img class="img-portfolio img-responsive" src="img/mysql5.png">
+                                </div>
+                            </div>
+                            <p>Lo primero será crear la base de datos, escriba:<br/> <strong>CREATE DATABASE Cosina;</strong><br/> y presione enter.
+                            </p>
+                            <div class="col-md-12">
+                                <div class="portfolio-item">
+                                    <img class="img-portfolio img-responsive" src="img/mysql6.png">
+                                </div>
+                            </div>
+                            <p>Pasaremos a seleccionar la base de datos con la que trabajaremos, escribimos:<br/><strong>USE Cosina;</strong><br/> y presionamos enter.
+                            </p>
+                            <div class="col-md-12">
+                                <div class="portfolio-item">
+                                    <img class="img-portfolio img-responsive" src="img/mysql7.png">
+                                </div>
+                            </div>
+                            <p>Ahora crearemos las tablas, para ello un consejo,<br/> para realizar el paste desde el clipboard presione las teclas shift + insert.<br/>
+                            Pasamos a copiar los datos de la tabla <strong>TIngredReceta</strong>.<br/> Y presione enter.
+                            </p>
+                            <div class="col-md-12">
+                                <div class="portfolio-item">
+                                    <img class="img-portfolio img-responsive" src="img/mysql8.png">
+                                </div>
+                            </div>
+                            <p>De igual manera los datos de la tabla <strong>TReceta</strong>.
+                            </p>
+                            <div class="col-md-12">
+                                <div class="portfolio-item">
+                                    <img class="img-portfolio img-responsive" src="img/mysql9.png">
+                                </div>
+                            </div>
+                            <p>Y la tabla <strong>TIngredientes</strong>.
+                            </p>
+                            <div class="col-md-12">
+                                <div class="portfolio-item">
+                                    <img class="img-portfolio img-responsive" src="img/mysql10.png">
+                                </div>
+                            </div>
+                            <p>Para revisar que la tabla exista, escriba:<br/><strong>show databases;</strong></p>
+                            <div class="col-md-12">
+                                <div class="portfolio-item">
+                                    <img class="img-portfolio img-responsive" src="img/mysql11.png">
+                                </div>
+                            </div>
+                            <p>Mostrara las bases de datos existentes.</p>
+                            <div class="col-md-12">
+                                <div class="portfolio-item">
+                                    <img class="img-portfolio img-responsive" src="img/mysql12.png">
+                                </div>
+                            </div>
+                            <p>Para revisar las tablas que se encuentran en la base de datos escribimos:<br/>
+                            <strong>use Cosina;<br/>show tables;</strong>
+                            </p>
+                            <div class="col-md-12">
+                                <div class="portfolio-item">
+                                    <img class="img-portfolio img-responsive" src="img/mysql13.png">
+                                </div>
+                            </div>
+                            <p>Y nos mostrara las tablas de esta base de datos.</p>
+                            <div class="col-md-12">
+                                <div class="portfolio-item">
+                                    <img class="img-portfolio img-responsive" src="img/mysql14.png">
+                                </div>
+                            </div>
+                            <p>Para ver los campos de cada tabla escribimos:<br/>
+                            <strong>
+                            describe TIngredReceta;<br/>
+                            describe TIngredientes;<br/>
+                            describe TReceta;
+                            </strong>
+                            </p>
+                            <div class="col-md-12">
+                                <div class="portfolio-item">
+                                    <img class="img-portfolio img-responsive" src="img/mysql15.png">
+                                </div>
+                            </div>
+                            <p>Con esto terminamos para salir de Mysql escribimos:<br/><strong>quit</strong><br/> y presionamos enter.</p>
+                            <div class="col-md-12">
+                                <div class="portfolio-item">
+                                    <img class="img-portfolio img-responsive" src="img/mysql16.png">
+                                </div>
+                            </div>
+                            <p>Y para salir de PuTTy escribimos:<br/><srong>exit</srong><br/> y presionamos enter.</p>
+                            <div class="col-md-12">
+                                <div class="portfolio-item">
+                                    <img class="img-portfolio img-responsive" src="img/mysql17.png">
+                                </div>
+                            </div>
+                            <p>Este se cerrara automaticamente.</p>
                         </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-github fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <strong>Github</strong>
-                                </h4>                             
-                                <a target="_blank" href="https://github.com/cloudandapplication/repository" class="btn btn-light">Revisar</a>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-dropbox fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <strong>Dropbox</strong>
-                                </h4>                            
-                                <a target="_blank" href="https://www.dropbox.com/sh/bic2kodi6paxd6r/AAA_CRUPwXnx4g7sIGgSLZRga?dl=0" class="btn btn-light">Revisar</a>
-                            </div>
-                        </div>                       
                     </div>
-                    <!-- /.row (nested) -->
                 </div>
-                <!-- /.col-lg-10 -->
             </div>
             <!-- /.row -->
         </div>
@@ -137,31 +206,6 @@
         </div>
     </aside>
 
-    <!-- Portfolio -->
-    <section id="portfolio" class="portfolio">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h2>Nuestro Trabajo</h2>
-                    <hr class="small">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <p>Tarea 1</p>
-                            <div class="portfolio-item">
-                                <a href="http://159.203.170.17/mysql-linea-comando.html">
-                                    <img class="img-portfolio img-responsive" src="img/mysql10.png">
-                                </a>
-                            </div>
-                        </div>
-                       
-                    </div>
-                </div>
-                <!-- /.col-lg-10 -->
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container -->
-    </section>
 
     <!-- Call to Action -->
     <aside class="call-to-action bg-primary">
