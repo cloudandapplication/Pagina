@@ -38,22 +38,13 @@
         <ul class="sidebar-nav">
             <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
             <li class="sidebar-brand">
-                <a href="#top" onclick=$("#menu-close").click();>Cloud&amp;Application</a>
+                <a href="http://159.203.170.17/" onclick=$("#menu-close").click();>Cloud&amp;Application</a>
             </li>
             <li>
                 <a href="#top" onclick=$("#menu-close").click();>Home</a>
             </li>
             <li>
-                <a href="#about" onclick=$("#menu-close").click();>Lema</a>
-            </li>
-            <li>
-                <a href="#services" onclick=$("#menu-close").click();>Repositorios</a>
-            </li>
-            <li>
-                <a href="#portfolio" onclick=$("#menu-close").click();>Nuestro Trabajo</a>
-            </li>
-            <li>
-                <a href="#contact" onclick=$("#menu-close").click();>Contactos</a>
+                <a href="#about" onclick=$("#menu-close").click();>Tarea 3</a>
             </li>
         </ul>
     </nav>
@@ -61,8 +52,7 @@
     <!-- Header -->
     <header id="top" class="header">
         <div class="text-vertical-center">
-            <h1>Bienvenido a Cloud&amp;Application</h1>
-            <h3>Tareas y repositorios</h3>
+            <h1>Tarea 3</h1>
             <br>
             <a href="#about" class="btn btn-dark btn-lg">Mire Más</a>
         </div>
@@ -73,57 +63,107 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Todos nuestros trabajos en 2 repositorios!</h2>
-                    <p class="lead">Para su comodidad</p>
-                </div>
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container -->
-    </section>
-
-    <!-- Services -->
-    <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
-    <section id="services" class="services bg-primary">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-lg-10 col-lg-offset-1">
-                    <h2>Repositorios</h2>
+                    <h2>Instalar Git y primer commit.</h2>
+                    <div class="col-lg-10 col-lg-offset-1 text-center">
                     <hr class="small">
-                    <div class="row">
-                    	<div class="col-md-3 col-sm-6">
-                            <div class="service-item">
-                            </span>
+                        <p>Para esto se utilizaran las herramientas:</p>
+                        <p>PuTTy en su ver. 0.67. <a href="http://www.putty.org/" target="blank">-Descárgalo-</a></p>
+                        <p>Git.<a href="https://git-scm.com/downloads" target="blank">-Descárgalo-</a></p>
+                        <p>Servidor Ubuntu LAMP 16.04</p>
+                        <hr class="small">
+                        <p>El primer paso para instalar Git en nuestro servidor es entrar a nuestro server, en este caso mediante Putty, después teclear la siguiente línea de comando:
+                        <br>
+                        <strong>sudo apt-get update</strong>
+                        </p>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="portfolio-item">
+                                    <img class="img-portfolio img-responsive" src="img/git1.png">
+                                </div>
                             </div>
+                            <p>(Pantalla resultante después de ejecutar la línea de comandos)</p>
+                            <div class="col-md-12">
+                                <div class="portfolio-item">
+                                    <img class="img-portfolio img-responsive" src="img/git2.png">
+                                </div>
+                            </div>
+                            <p>A continuación, se procederá a teclear la siguiente línea de comandos:
+                            <br>
+                            <strong>
+							sudo apt-get install git-all
+							</strong>
+							<br>
+							Al haber tecleado estos, se mostrará una pantalla como la siguiente, mostrándonos un mensaje del espacio necesario para la instalación.
+							</p>
+
+                            <div class="col-md-12">
+                                <div class="portfolio-item">
+                                    <img class="img-portfolio img-responsive" src="img/git3.png">
+                                </div>
+                            </div>
+                            <p>Al teclear “Y”, se procederá a instalar Git y el resultado será algo como lo siguiente:
+                            </p>
+                            <div class="col-md-12">
+                                <div class="portfolio-item">
+                                    <img class="img-portfolio img-responsive" src="img/git4.png">
+                                </div>
+                            </div>
+                            <p>A continuación, se procederá a comprobar la versión que se ha instalado en el servidor con el siguiente comando:<br>
+                            <strong>git --version</strong>
+                            </p>
+                            <div class="col-md-12">
+                                <div class="portfolio-item">
+                                    <img class="img-portfolio img-responsive" src="img/git5.png">
+                                </div>
+                            </div>
+                            <p>Ahora, dejaremos de lado el servidor para pasar a trabajar localmente, primero nos posicionaremos en la carpeta en la que queremos crear un repositorio, en nuestro caso, la carpeta donde se encuentra nuestra página:
+                            </p>
+                            <div class="col-md-12">
+                                <div class="portfolio-item">
+                                    <img class="img-portfolio img-responsive" src="img/git6.png">
+                                </div>
+                            </div>
+                            <p>Al estar ubicados en ella, procederemos a inicializar el repositorio con el siguiente comando:
+                            <strong>git init</strong>
+                            </p>
+                            <div class="col-md-12">
+                                <div class="portfolio-item">
+                                    <img class="img-portfolio img-responsive" src="img/git7.png">
+                                </div>
+                            </div>
+                            <p>Luego, se procederá a adherir los archivos que queremos entren en el commit con el siguiente comando:
+                            <br><strong>
+							git add -A</strong><br>
+							(Pantalla resultante al ejecutar el comando)
+
+                            </p>
+                            <div class="col-md-12">
+                                <div class="portfolio-item">
+                                    <img class="img-portfolio img-responsive" src="img/git8.png">
+                                </div>
+                            </div>
+                            <p>Se procede a subir los cambios al repositorio en un commit mediante el siguiente comando:
+                            <br>
+                            <strong>
+							git commit -m “Nombre del commit”</strong><br>
+							(Pantalla resultante de ejecutar el commit)
+
+                            </p>
+                            <div class="col-md-12">
+                                <div class="portfolio-item">
+                                    <img class="img-portfolio img-responsive" src="img/git9.png">
+                                </div>
+                            </div>
+                            <p>Para concluir esta parte de la práctica, se procederá a agregar un repositorio remoto, en nuestro caso, el github de nuestra página
+                            </p>
+                            <div class="col-md-12">
+                                <div class="portfolio-item">
+                                    <img class="img-portfolio img-responsive" src="img/git10.png">
+                                </div>
+                            </div>                            
                         </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-github fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <strong>Github</strong>
-                                </h4>                             
-                                <a target="_blank" href="https://github.com/cloudandapplication/repository" class="btn btn-light">Revisar</a>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-dropbox fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <strong>Dropbox</strong>
-                                </h4>                            
-                                <a target="_blank" href="https://www.dropbox.com/sh/bic2kodi6paxd6r/AAA_CRUPwXnx4g7sIGgSLZRga?dl=0" class="btn btn-light">Revisar</a>
-                            </div>
-                        </div>                       
                     </div>
-                    <!-- /.row (nested) -->
                 </div>
-                <!-- /.col-lg-10 -->
             </div>
             <!-- /.row -->
         </div>
@@ -137,50 +177,6 @@
         </div>
     </aside>
 
-    <!-- Portfolio -->
-    <section id="portfolio" class="portfolio">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h2>Nuestro Trabajo</h2>
-                    <hr class="small">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h3>Tarea 1</h3>
-                            <p>Crear base de datos con llaves foraneas en Mysql</p>
-                            <div class="portfolio-item">
-                                <a href="http://159.203.170.17/mysql-linea-comando.html">
-                                    <img class="img-portfolio img-responsive" src="img/mysql10.png">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <h3>Tarea 2</h3>
-                            <p>Practica ssh</p>
-                            <div class="portfolio-item">
-                                <a href="http://159.203.170.17/practica-ssh.html">
-                                    <img class="img-portfolio img-responsive" src="img/ssh8.png">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <h3>Tarea 3</h3>
-                            <p>Instalar Git y primer commit.</p>
-                            <div class="portfolio-item">
-                                <a href="http://159.203.170.17/practica-git.html">
-                                    <img class="img-portfolio img-responsive" src="img/git8.png">
-                                </a>
-                            </div>
-                        </div>
-                       
-                    </div>
-                </div>
-                <!-- /.col-lg-10 -->
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container -->
-    </section>
 
     <!-- Call to Action -->
     <aside class="call-to-action bg-primary">

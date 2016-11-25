@@ -38,22 +38,13 @@
         <ul class="sidebar-nav">
             <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
             <li class="sidebar-brand">
-                <a href="#top" onclick=$("#menu-close").click();>Cloud&amp;Application</a>
+                <a href="http://159.203.170.17/" onclick=$("#menu-close").click();>Cloud&amp;Application</a>
             </li>
             <li>
                 <a href="#top" onclick=$("#menu-close").click();>Home</a>
             </li>
             <li>
-                <a href="#about" onclick=$("#menu-close").click();>Lema</a>
-            </li>
-            <li>
-                <a href="#services" onclick=$("#menu-close").click();>Repositorios</a>
-            </li>
-            <li>
-                <a href="#portfolio" onclick=$("#menu-close").click();>Nuestro Trabajo</a>
-            </li>
-            <li>
-                <a href="#contact" onclick=$("#menu-close").click();>Contactos</a>
+                <a href="#about" onclick=$("#menu-close").click();>Tarea 2</a>
             </li>
         </ul>
     </nav>
@@ -61,8 +52,7 @@
     <!-- Header -->
     <header id="top" class="header">
         <div class="text-vertical-center">
-            <h1>Bienvenido a Cloud&amp;Application</h1>
-            <h3>Tareas y repositorios</h3>
+            <h1>Tarea 2</h1>
             <br>
             <a href="#about" class="btn btn-dark btn-lg">Mire Más</a>
         </div>
@@ -73,57 +63,93 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Todos nuestros trabajos en 2 repositorios!</h2>
-                    <p class="lead">Para su comodidad</p>
-                </div>
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container -->
-    </section>
-
-    <!-- Services -->
-    <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
-    <section id="services" class="services bg-primary">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-lg-10 col-lg-offset-1">
-                    <h2>Repositorios</h2>
+                    <h2>Conexión por ssh.</h2>
+                    <div class="col-lg-10 col-lg-offset-1 text-center">
                     <hr class="small">
-                    <div class="row">
-                    	<div class="col-md-3 col-sm-6">
-                            <div class="service-item">
-                            </span>
+                        <p>Para esto se utilizaran las herramientas:</p>
+                        <p>PuTTy en su ver. 0.67. <a href="http://www.putty.org/" target="blank">-Descárgalo-</a></p>
+                        <p>MySQL Workbench.<a href="http://www.mysql.com/products/workbench/" target="blank">-Descárgalo-</a></p>
+                        <p>Servidor Ubuntu LAMP 16.04</p>
+                        <hr class="small">
+                        <p>Para poder conectarse por SSH necesitaremos primero crear un usuario con todos los permisos. Empezaremos por iniciar sesión desde nuestro servidor, nosotros usaremos Putty para esto, ya al estar dentro de nuestro servidor, procederemos a entrar a mysql mediante la siguiente línea de comandos:
+                        <br>
+                        <strong>mysql -u root -p</strong>
+                        </p>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="portfolio-item">
+                                    <img class="img-portfolio img-responsive" src="img/ssh1.png">
+                                </div>
                             </div>
+                            <p>A continuación, necesitaremos ingresar la contraseña de mysql.</p>
+                            <div class="col-md-12">
+                                <div class="portfolio-item">
+                                    <img class="img-portfolio img-responsive" src="img/ssh2.png">
+                                </div>
+                            </div>
+                            <p>Después de esto, estaremos dentro de mysql.</p>
+                            <div class="col-md-12">
+                                <div class="portfolio-item">
+                                    <img class="img-portfolio img-responsive" src="img/ssh3.png">
+                                </div>
+                            </div>
+                            <p>Procederemos a crear nuestro usuario, para esto necesitaremos teclear la siguiente línea de comandos:<br>
+                            <strong>CREATE USER 'nombre_usuario'@'%' IDENTIFIED BY 'tu_contrasena';</strong>
+                            </p>
+                            <div class="col-md-12">
+                                <div class="portfolio-item">
+                                    <img class="img-portfolio img-responsive" src="img/ssh4.png">
+                                </div>
+                            </div>
+                            <p>Acto seguido, le proporcionaremos el acceso a nuestro usuario creado con la siguiente línea de código:
+                            <br>
+                            <strong>GRANT ALL PRIVILEGES ON * . * TO 'nombre_usuario'@'%';</strong>
+                            </p>
+                            <div class="col-md-12">
+                                <div class="portfolio-item">
+                                    <img class="img-portfolio img-responsive" src="img/ssh5.png">
+                                </div>
+                            </div>
+                            <p>Después de haberle otorgado los permisos al usuario, refrescaremos todos los privilegios con el siguiente comando:
+                            <br>
+                            <strong>FLUSH PRIVILEGES;</strong>
+                            </p>
+                            <div class="col-md-12">
+                                <div class="portfolio-item">
+                                    <img class="img-portfolio img-responsive" src="img/ssh6.png">
+                                </div>
+                            </div>
+                            <p>Con esto terminaremos con el servidor, ahora pasaremos a utilizar MySQL Workbench para realizar la conexión, al iniciar daremos clic en el símbolo de “+” como se muestra en la siguiente imagen:
+                            </p>
+                            <div class="col-md-12">
+                                <div class="portfolio-item">
+                                    <img class="img-portfolio img-responsive" src="img/ssh7.png">
+                                </div>
+                            </div>
+                            <p>Al realizar esto, se mostrará la ventana para nuevas conexiones, por default el método es TCP/IP lo debemos de cambiar a SSH
+                            </p>
+                            <div class="col-md-12">
+                                <div class="portfolio-item">
+                                    <img class="img-portfolio img-responsive" src="img/ssh8.png">
+                                </div>
+                            </div>
+                            <p>Seguiremos llenando los campos con los datos necesarios, en Connection Name escribiremos el nombre que queremos darle a nuestra conexión, en SSH Hostname ingresaremos la dirección Ip de nuestro servidor, en SSH Username escribiremos el usuario root, en SSH Password escribiremos la contraseña de nuestro servidor, en MySQL Hostname dejaremos 127.0.0.1, en MySQL Server Port dejaremos el puerto 3306, en Username escribiremos el usuario que creamos, en Password escribiremos la contraseña que le creamos al usuario, al haber llenado todos estos campos, procederemos a dar clic en Test Connection como se muestra en la siguiente imagen:
+                            </p>
+                            <div class="col-md-12">
+                                <div class="portfolio-item">
+                                    <img class="img-portfolio img-responsive" src="img/ssh9.png">
+                                </div>
+                            </div>
+                            <p>Por último, se mostrará un mensaje confirmando la conexión a MySQL.
+                            </p>
+                            <div class="col-md-12">
+                                <div class="portfolio-item">
+                                    <img class="img-portfolio img-responsive" src="img/ssh10.png">
+                                </div>
+                            </div>                            
                         </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-github fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <strong>Github</strong>
-                                </h4>                             
-                                <a target="_blank" href="https://github.com/cloudandapplication/repository" class="btn btn-light">Revisar</a>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-dropbox fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <strong>Dropbox</strong>
-                                </h4>                            
-                                <a target="_blank" href="https://www.dropbox.com/sh/bic2kodi6paxd6r/AAA_CRUPwXnx4g7sIGgSLZRga?dl=0" class="btn btn-light">Revisar</a>
-                            </div>
-                        </div>                       
                     </div>
-                    <!-- /.row (nested) -->
                 </div>
-                <!-- /.col-lg-10 -->
             </div>
             <!-- /.row -->
         </div>
@@ -137,50 +163,6 @@
         </div>
     </aside>
 
-    <!-- Portfolio -->
-    <section id="portfolio" class="portfolio">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h2>Nuestro Trabajo</h2>
-                    <hr class="small">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h3>Tarea 1</h3>
-                            <p>Crear base de datos con llaves foraneas en Mysql</p>
-                            <div class="portfolio-item">
-                                <a href="http://159.203.170.17/mysql-linea-comando.html">
-                                    <img class="img-portfolio img-responsive" src="img/mysql10.png">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <h3>Tarea 2</h3>
-                            <p>Practica ssh</p>
-                            <div class="portfolio-item">
-                                <a href="http://159.203.170.17/practica-ssh.html">
-                                    <img class="img-portfolio img-responsive" src="img/ssh8.png">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <h3>Tarea 3</h3>
-                            <p>Instalar Git y primer commit.</p>
-                            <div class="portfolio-item">
-                                <a href="http://159.203.170.17/practica-git.html">
-                                    <img class="img-portfolio img-responsive" src="img/git8.png">
-                                </a>
-                            </div>
-                        </div>
-                       
-                    </div>
-                </div>
-                <!-- /.col-lg-10 -->
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container -->
-    </section>
 
     <!-- Call to Action -->
     <aside class="call-to-action bg-primary">
